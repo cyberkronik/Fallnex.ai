@@ -1,0 +1,64 @@
+:root{
+  --bg:#06100c;--panel:#0b1711;--panel2:#101f16;--text:#f2f1e9;--muted:#a9b3a1;--green:#9fbd59;--line:#243425;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:Inter,Arial,sans-serif;background:radial-gradient(circle at top,#182919,#06100c 60%);color:var(--text)}
+.app{display:flex;min-height:100vh}
+.sidebar{width:290px;background:rgba(5,12,8,.88);border-right:1px solid var(--line);padding:28px;display:flex;flex-direction:column;gap:28px}
+.brand{display:flex;align-items:center;gap:14px}
+.leaf-f{width:50px;height:50px;border:1px solid #789c43;border-radius:18px 6px 18px 6px;display:grid;place-items:center;color:var(--green);font-weight:900;font-size:28px;box-shadow:0 0 25px #9fbd5940}
+h1,h2,h3,p{margin:0}
+.brand h1{letter-spacing:4px;text-transform:uppercase}
+.brand p,.eyebrow{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--green)}
+nav{display:grid;gap:12px}
+.nav,.primary,.card button,.quick button,#sendBtn{border:1px solid #5f753b;background:rgba(159,189,89,.08);color:var(--text);border-radius:14px;padding:14px;cursor:pointer}
+.nav{text-align:left;font-size:15px}
+.nav.active,.primary,#sendBtn{background:linear-gradient(135deg,#8baa49,#b4cf68);color:#08100b;font-weight:800}
+.values{margin-top:auto;border:1px solid var(--line);border-radius:18px;padding:18px;background:rgba(255,255,255,.03)}
+.values h3{color:var(--green);margin-bottom:12px}
+.values p{margin:10px 0;color:var(--muted)}
+main{flex:1;padding:36px;overflow:auto}
+header{display:flex;align-items:center;justify-content:space-between;margin-bottom:24px}
+header h2{font-size:34px}
+.screen{display:none}
+.screen.active{display:block}
+.hero{min-height:520px;border:1px solid #31452d;border-radius:26px;padding:48px;background:
+linear-gradient(rgba(6,16,12,.3),rgba(6,16,12,.85)),
+url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80') center/cover;
+position:relative;overflow:hidden}
+.hero:before{content:"";position:absolute;inset:0;background-image:linear-gradient(90deg,transparent 0 94%,#9fbd5925 95%),linear-gradient(transparent 0 94%,#9fbd5916 95%);background-size:60px 60px;opacity:.3}
+.hero>*{position:relative}
+.birds{color:var(--green);letter-spacing:18px;text-align:center;margin-bottom:28px;animation:float 4s infinite ease-in-out}
+.hero h2{font-size:38px;text-align:center}
+.hero p{text-align:center;color:var(--muted);margin:12px auto 28px;max-width:720px}
+.chat{max-width:860px;margin:auto;background:rgba(8,16,11,.72);border:1px solid #405431;border-radius:22px;padding:18px;backdrop-filter:blur(10px)}
+.messages{height:220px;overflow:auto;display:grid;gap:12px;align-content:start;padding:6px}
+.msg{padding:13px 15px;border-radius:15px;max-width:80%;line-height:1.45}
+.msg.ai{background:#142318;border:1px solid #33472a}
+.msg.user{background:#8faa4f;color:#06100c;margin-left:auto;font-weight:700}
+.inputrow{display:flex;gap:10px;margin-top:12px}
+input{flex:1;background:#08110c;border:1px solid #3b4d31;color:var(--text);border-radius:14px;padding:16px;font-size:16px}
+.quick{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:18px}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.card{background:linear-gradient(145deg,#0b1711,#132319);border:1px solid #2a3b28;border-radius:22px;padding:26px;min-height:190px}
+.card h3{color:var(--green);margin-bottom:10px}
+.card p{color:var(--muted);line-height:1.55;margin-bottom:20px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.stats div{border:1px solid #2a3b28;border-radius:22px;padding:35px;background:#0b1711;text-align:center}
+.stats strong{display:block;font-size:45px;color:var(--green)}
+.stats span{color:var(--muted)}
+.glow .card,.glow .hero,.glow .chat{box-shadow:0 0 35px #9fbd5930}
+@keyframes float{50%{transform:translateY(-10px)}}
+@media(max-width:850px){
+  .app{display:block}
+  .sidebar{width:auto;position:sticky;top:0;z-index:5;padding:18px}
+  nav{grid-template-columns:repeat(2,1fr)}
+  .values{display:none}
+  main{padding:18px}
+  header{display:block}
+  header h2{font-size:26px;margin:6px 0 14px}
+  .hero{padding:28px 16px}
+  .hero h2{font-size:28px}
+  .grid,.stats{grid-template-columns:1fr}
+  .msg{max-width:95%}
+}

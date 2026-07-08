@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FallNex AI Preview</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="leaf-f">F</div>
+        <div>
+          <h1>FallNex</h1>
+          <p>Innovate • Sustain • Impact</p>
+        </div>
+      </div>
+
+      <nav>
+        <button class="nav active" data-screen="ai">✦ AI Assistant</button>
+        <button class="nav" data-screen="directory">▦ Directory</button>
+        <button class="nav" data-screen="projects">◇ Projects</button>
+        <button class="nav" data-screen="impact">◎ Impact</button>
+      </nav>
+
+      <div class="values">
+        <h3>3 Birds. 3 Values.</h3>
+        <p>🕊 Innovate</p>
+        <p>🕊 Sustain</p>
+        <p>🕊 Impact</p>
+      </div>
+    </aside>
+
+    <main>
+      <header>
+        <div>
+          <p class="eyebrow">FallNex AI Beta</p>
+          <h2 id="screenTitle">Technology rooted in nature.</h2>
+        </div>
+        <button class="primary" id="themeBtn">Toggle Glow</button>
+      </header>
+
+      <section id="ai" class="screen active">
+        <div class="hero">
+          <div class="birds">⌁ 🕊 🕊 🕊 ⌁</div>
+          <h2>Good day, Founder.</h2>
+          <p>Ask FallNex AI for ideas, business planning, sustainability checks, directory strategy, or project help.</p>
+
+          <div class="chat">
+            <div id="messages" class="messages">
+              <div class="msg ai">Welcome to FallNex AI. I can help you build the directory first, then expand into the AI assistant.</div>
+            </div>
+            <div class="inputrow">
+              <input id="chatInput" placeholder="Ask anything..." />
+              <button id="sendBtn">➜</button>
+            </div>
+          </div>
+
+          <div class="quick">
+            <button data-prompt="Give me ideas for the FallNex directory homepage">Directory ideas</button>
+            <button data-prompt="Suggest eco-tech features for FallNex">Eco-tech features</button>
+            <button data-prompt="Create a launch plan for FallNex">Launch plan</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="directory" class="screen">
+        <div class="grid">
+          <article class="card">
+            <h3>Kosi Bay Tourism</h3>
+            <p>Local stays, activities, guides, transport, food spots, and hidden gems.</p>
+            <button>View listing</button>
+          </article>
+          <article class="card">
+            <h3>Bloemfontein Services</h3>
+            <p>Small businesses, student services, beauty, food, repairs, and delivery.</p>
+            <button>View listing</button>
+          </article>
+          <article class="card">
+            <h3>Eco Brands</h3>
+            <p>Sustainable clothing, local creators, green products, and community projects.</p>
+            <button>View listing</button>
+          </article>
+        </div>
+      </section>
+
+      <section id="projects" class="screen">
+        <div class="grid">
+          <article class="card"><h3>FallNex Directory</h3><p>Status: MVP foundation</p></article>
+          <article class="card"><h3>FallNex AI</h3><p>Status: Preview mode</p></article>
+          <article class="card"><h3>FallNex Apparel</h3><p>Status: Brand concept</p></article>
+        </div>
+      </section>
+
+      <section id="impact" class="screen">
+        <div class="stats">
+          <div><strong>24</strong><span>Projects assisted</span></div>
+          <div><strong>3</strong><span>Core values</span></div>
+          <div><strong>156</strong><span>Ideas generated</span></div>
+          <div><strong>12.5K</strong><span>Future reach</span></div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
